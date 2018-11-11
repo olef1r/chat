@@ -5,7 +5,7 @@
 }
 
 body {
-    background: #C5DDEB;
+    background: #f2f2f2;
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -109,7 +109,6 @@ body {
     line-height: 26px;
     font-size: 16px;
     margin-bottom: 30px;
-    /*width: 90%;*/
     position: relative;
 }
 .chat .chat-history .message:after {
@@ -121,12 +120,12 @@ body {
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-bottom-color: #86BB71;
+    border-bottom-color: rgb(85, 85, 218);
     border-width: 10px;
     margin-left: -10px;
 }
 .chat .chat-history .my-message {
-    background: #86BB71;
+    background: rgb(85, 85, 218);
 }
 .chat .chat-message, .room .room-create {
     padding: 20px;
@@ -145,7 +144,7 @@ body {
 }
 
 .online {
-    color: #86BB71;
+    color: rgb(85, 85, 218);
 }
 
 .offline {
@@ -153,7 +152,7 @@ body {
 }
 
 .me {
-    color: #94C2ED;
+    color: white;
 }
 
 .align-left {
@@ -177,8 +176,6 @@ body {
     height: 0;
 }
 
-
-/*  Login Page */
 .login-page {
     width: 400px;
     padding: 8% 0 0;
@@ -209,7 +206,7 @@ body {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
-    background: #86BB71;
+    background: rgb(85, 85, 218);
     width: 100%;
     border: 0;
     padding: 15px;
@@ -220,7 +217,7 @@ body {
     cursor: pointer;
 }
 .form button:hover:enabled,.form button:active,.form button:focus {
-    background: #89c771;
+    background: rgb(85, 85, 218);
 }
 .form .message, .room-create .message {
     margin: 15px 0 0;
@@ -228,14 +225,13 @@ body {
     font-size: 12px;
 }
 .form .message a {
-    color: #86BB71;
+    color:  rgb(85, 85, 218);
     text-decoration: none;
 }
 .form .register-form {
     display: none;
 }
 
-/* ****** Edits ****** */
 ul {
     list-style: none;
 }
@@ -260,7 +256,7 @@ ul {
     text-align: center;
 }
 .room .room-list .room-item {
-    background: #86BB71;
+    background: rgb(85, 85, 218);
 }
 .room .room-list a {
     text-decoration: none;
@@ -295,7 +291,7 @@ ul {
     float: right;
     text-transform: uppercase;
     outline: 0;
-    background: #86BB71;
+    background: rgb(85, 85, 218);
     border: 0;
     padding: 15px;
     color: #FFFFFF;
@@ -305,10 +301,10 @@ ul {
     cursor: pointer;
 }
 button:hover:enabled, button:active, button:focus {
-    background: #89c771;
+    background :rgb(85, 85, 218);
 }
 a.rooms-btn:hover:enabled, a.rooms-btn:active, a.rooms-btn:focus {
-    background: #89c771;
+    background:rgb(85, 85, 218);
 }
 a.logout-btn{
     background-color: rgb(226, 98, 92);
@@ -336,7 +332,7 @@ a.logout-btn:hover:enabled, a.logout-btn:active, a.logout-btn:focus {
     color: red;
 }
 .message.success {
-    color: #86BB71;
+    color:rgb(85, 85, 218);
 }
 .container {
     overflow: hidden;

@@ -12,7 +12,7 @@ $('form .message a').on('click', e => {
 function response (data) {
     let resp = data.responseText;
     try {
-        if (data.message != void (0)) {
+        if (data.message != null) {
             resp = data.message;
         } else {
             resp = JSON.parse(data.responseText);

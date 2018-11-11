@@ -7,7 +7,7 @@ function ExtractJwt (req) {
 module.exports = {
     jwt: {
         jwtFromRequest: ExtractJwt,
-        secretOrKey: 'secret'
+        secretOrKey: 'test'
     },
     expiresIn: '1 day'
 };

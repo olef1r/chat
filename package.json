@@ -12,6 +12,7 @@
     "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
+    "expect": "^23.6.0",
     "express": "^4.16.4",
     "froncubator-validator-js": "^1.0.3",
     "handlebars": "^4.0.12",
@@ -24,9 +25,11 @@
     "passport-jwt": "^4.0.0",
     "socket.io": "^2.1.1",
     "socket.io-client": "^2.1.1",
+    "supertest": "^3.3.0",
     "swagger": "^0.7.5",
     "swagger-jsdoc": "^3.2.3",
     "swagger-node-express": "^2.1.3",
+    "swagger-ui": "^3.19.5",
     "swagger-ui-express": "^4.0.1"
   },
   "devDependencies": {

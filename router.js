@@ -1,12 +1,10 @@
-
 const express = require('express');
 const config = require('./config');
 const bcrypt = require('bcrypt');
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const _ = require('lodash');
-const User = require('/home/anastasiia/work/nodeJS/public-chat/models/user');
-
+const User = require('./models/user');
 
 module.exports = app => {
     //Store all JS and files.
@@ -56,8 +54,7 @@ module.exports = app => {
             res.status(200).send({message: 'User create!'})
             }         
 
-            else res.status(200).send({ message: 'Username  nust contains only letters and numbers' });         
-        
+            else res.status(200).send({ message: 'Username  must contains only letters and numbers' });                 
         } catch (err) {
             console.log(err);
             res.status(500).send({ message: 'Some error!' })
@@ -67,7 +64,7 @@ module.exports = app => {
     app.post('/logout', (req, res) => {
         res.clearCookie('token');
         res.status(200).send({ message: 'Logout success!' })
-    })
+    });
 }
 
 function checkAth(req, res, next) {
@@ -87,11 +84,5 @@ function createToken(body) {
 }
 
 function findUser (req) {
-    
-   // let username =  req.body.username;
-
-    //if (/\W/.exec(username)) {
-       // console.log('error')
-    //} else
      return User.findOne({ username: { $regex: req.body.username, $options: 'i'} }).lean().exec();
 }

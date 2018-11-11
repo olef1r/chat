@@ -1,7 +1,7 @@
 function response (data) {
     let resp = data.responseText;
     try {
-        if (data.message != void (0)) {
+        if (data.message != null (0)) {
             resp = data.message;
         } else {
             resp = JSON.parse(data.responseText);
