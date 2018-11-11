@@ -28,7 +28,8 @@ $(".logout-btn").on('click', e => {
 });
 
 $(document).ready(() => {
-    let socket = io.connect('window.location.hostname');
+    let socket = io();
+    //io.connect('window.location.hostname');
     socket.on('connected', msg  => {
         socket.emit('receiveAll');
     });
