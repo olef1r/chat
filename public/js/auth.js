@@ -29,7 +29,7 @@ $(".logout-btn").on('click', e => {
 
 $(document).ready(() => {
     let socket = io();
-    //io.connect('window.location.hostname');
+    //io.connect('localhost:8080');
     socket.on('connected', msg  => {
         socket.emit('receiveAll');
     });
