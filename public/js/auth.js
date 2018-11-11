@@ -28,8 +28,7 @@ $(".logout-btn").on('click', e => {
 });
 
 $(document).ready(() => {
-    let socket = io();
-    //io.connect('localhost:8080');
+    let socket = io.connect('https://node-chat-test-11.herokuapp.com/');
     socket.on('connected', msg  => {
         socket.emit('receiveAll');
     });
