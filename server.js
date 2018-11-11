@@ -4,20 +4,18 @@ const passport = require('passport');
 const { Strategy } = require('passport-jwt');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const socketIO = require('socket.io');
+
 const { jwt } = require('./config');
 const app = express();
 
 
 const PORT = process.env.PORT || 8080;
 
-
-
 const server = app.listen(PORT , () => {
     console.log(`Example app listening on port ${PORT}`);
 });
 
-const io = socketIO(server);
+const  io = require('socket.io').listen(server);
 
 //const io = require('socket.io').listen(server, { serveClient: true });
 
@@ -39,6 +37,3 @@ passport.use(new Strategy(jwt, (jwt_payload, done) =>  {
 const router = require('./router')(app);
 const sockets = require('./sockets')(io); 
 
-
-
-    

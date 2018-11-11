@@ -36,7 +36,7 @@ $(document).ready(() => {
 
     socket.on('message', addMessage);
     socket.on('messageValidation', () => {
-        alert('Text is less than 200 s')
+        alert('Text is less than 200')
     });
 
     socket.on('history', messages => {
