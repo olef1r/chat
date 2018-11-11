@@ -8,7 +8,7 @@ const User = require('./models/user');
 
 module.exports = app => {
     //Store all JS and files.
-    app.use(express.static(__dirname + '/public'));
+    app.use(express.static('./public'));
 
     app.get('/', checkAth, (req, res) => {
         res.render('index.hbs', { username: req.user.username });
