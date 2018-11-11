@@ -4,10 +4,9 @@ const passport = require('passport');
 const { Strategy } = require('passport-jwt');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-
+const socketIO = require('socket.io');
 const { jwt } = require('./config');
 const app = express();
-
 
 const PORT = process.env.PORT || 8080;
 
@@ -15,12 +14,9 @@ const server = app.listen(PORT , () => {
     console.log(`Example app listening on port ${PORT}`);
 });
 
-const  io = require('socket.io').listen(server);
-
-//const io = require('socket.io').listen(server, { serveClient: true });
+const io = require('socket.io').listen(server, { serveClient: true });
 
 mongoose.Promise = global.Promise;
-//mongoose.connect('mongodb://localhost:27017/Chat', { useNewUrlParser: true });
 mongoose.connect('mongodb://admin:admin1@ds259463.mlab.com:59463/chat', { useNewUrlParser: true });
 
 // parse application/x-www-form-urlencoded
@@ -34,6 +30,10 @@ passport.use(new Strategy(jwt, (jwt_payload, done) =>  {
    done();
 }));
 
-const router = require('./router')(app);
-const sockets = require('./sockets')(io); 
+require('./router')(app);
+require('./sockets')(io); 
 
+
+
+
+    

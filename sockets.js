@@ -4,6 +4,7 @@ const passport = require('passport');
 const validator = require('froncubator-validator-js');
 
 function auth (socket, next) {
+
     // Parse cookie
     cookieParser()(socket.request, socket.request.res, () => {});
 
